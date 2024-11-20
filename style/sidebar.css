@@ -1,0 +1,148 @@
+.sidebar {
+    position: fixed;
+    top: 48px;
+    left: 0;
+    height: calc(100vh - 48px);
+    z-index: 999;
+    width: 336px;
+    display: flex;
+    left: 0;
+    right: 0;
+}
+
+
+
+.sidebar__icons {
+
+    background: #FFFFFF;
+    width: 56px;
+    text-align: center;
+    padding-top: 16px;
+    border-right: 1px solid #D5D8DD;
+
+}
+
+.sidebar__logo {
+    z-index: 10;
+    position: relative;
+    display: block;
+    align-items: center;
+    cursor: pointer;
+}
+
+.sidebar__logo:first-child {
+    margin-bottom: 32px;
+}
+
+.sidebar__logo-img {
+    width: 24px;
+    height: 24px;
+}
+
+
+
+.menu {
+    transition: transform 0.4s ease;
+    transform: translateX(0);
+    position: relative;
+    width: 280px;
+    background-color: #FCFCFD;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+    border-right: 1px solid #D5D8DD;
+}
+
+.menu__search {
+    display: flex;
+    align-items: center;
+    background: #FFFFFF;
+    margin-bottom: 16px;
+    padding: 16px;
+    border-bottom: 1px solid #D5D8DD;
+
+}
+
+.menu__search-bar {
+    height: 32px;
+    width: 208px;
+    background-image: url(/images/menusearch.svg);
+    background-position: center right 8px;
+    padding-left: 8px;
+    background-repeat: no-repeat;
+    border: 1px solid #E5E5EA;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.menu__search-bar::placeholder {
+    color: #BBBBBB;
+    font-style: normal;
+
+}
+
+.menu__search-bar:focus {
+    outline: #0076F5;
+    border: 1px solid #0076F5;
+
+}
+
+.menu__fix {
+
+    margin-left: 8px;
+}
+
+.menu__list {
+
+    padding: 0 16px;
+}
+
+.menu__item {
+    display: flex;
+    align-items: center;
+}
+
+.menu__item:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.menu__link-img {
+    margin-right: 16px;
+    cursor: pointer;
+}
+
+.menu__link-name {
+    cursor: pointer;
+}
+
+.menu.active {
+    display: none;
+}
+
+.sidebar.active {
+    width: 56px;
+}
+
+@media(max-width: 768px) {
+    .sidebar {
+        position: absolute;
+        top: 0;
+        height: 100%;
+    }
+
+    .sidebar.active {
+        display: none;
+    }
+
+    .sidebar__icons {
+        display: none;
+    }
+
+    .menu {
+        height: 100%;
+    }
+
+    .menu.active {
+        display: block;
+    }
+}

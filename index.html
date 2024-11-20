@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="/style/main.css">
+    <link rel="stylesheet" href="/style/header.css">
+    <link rel="stylesheet" href="/style/sidebar.css">
+    <link rel="stylesheet" href="/style/modal.css">
+    <title>SimpleOne</title>
+</head>
+
+<body>
+    <div class="header">
+        <a class='menu__burger header__menu '><img class='header__logo-img' src="/images/menu-inactive.svg" /></a>
+        <a class='header__logo'><img class='header__logo-img' src="/images/Logo.svg" /></a>
+        <div class="header__controls">
+            <div class="header__profile">
+                <input type="text" class="header__search-bar" placeholder="Поиск">
+                <img class="header__profile-img" src="/images/profile.svg">
+                <p class="header__profile-name">Максим Галактионов</p>
+
+            </div>
+            <button class="header__settings button"><img class="header__settings-img" src="/images/settings.svg"
+                    alt=""></button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar__icons">
+                <a class='menu__burger sidebar__logo'><img class='sidebar__logo-img'
+                        src="/images/menu.svg" /></a>
+                <a class='sidebar__logo'><img class='sidebar__logo-img' src="/images/star.svg" /></a>
+            </div>
+            <div class="menu">
+                <div class="menu__search">
+                    <input type="text" class="menu__search-bar" placeholder="Поиск по меню">
+                    <button class="button"><img class="header__settings-img" src="/images/fix.svg" alt=""></button>
+                </div>
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a className='menu__link'>
+                            <img class="menu__link-img" src="/images/arrow.svg">
+                            <span class="menu__link-name">Моя работа</span> </a>
+                    </li>
+                    <li class="menu__item">
+                        <a className='menu__link'>
+                            <img class="menu__link-img" src="/images/arrow.svg">
+                            <span class="menu__link-name">Структура портала</span></a>
+                    </li>
+                    <li class="menu__item">
+                        <a className='menu__link'>
+                            <img class="menu__link-img" src="/images/arrow.svg">
+                            <span class="menu__link-name">Личное расписание</span></a>
+                    </li>
+                    <li class="menu__item">
+                        <a className='menu__link'>
+                            <img class="menu__link-img" src="/images/arrow.svg">
+                            <span class="menu__link-name">Отсутствие на рабочем месте</span></a>
+                    </li>
+                    <li class="menu__item">
+                        <a className='menu__link'>
+                            <img class="menu__link-img" src="/images/arrow.svg">
+                            <span class="menu__link-name">Портфель услуг</span></a>
+                    </li>
+                    <li class="menu__item">
+                        <a className='menu__link'>
+                            <img class="menu__link-img" src="/images/arrow.svg">
+                            <span class="menu__link-name">Дашборды</span></a>
+                    </li>
+                    <li class="menu__item">
+                        <a className='menu__link'>
+                            <img class="menu__link-img" src="/images/arrow.svg">
+                            <span class="menu__link-name">Доски задач</span></a>
+                    </li>
+                    <li class="menu__item">
+                        <a className='menu__link'>
+                            <img class="menu__link-img" src="/images/arrow.svg">
+                            <span class="menu__link-name">Обращения</span></a>
+                    </li>
+                    <li class="menu__item">
+                        <a className='menu__link'>
+                            <img class="menu__link-img" src="/images/arrow.svg">
+                            <span class="menu__link-name">События</span></a>
+                    </li>
+                    <li class="menu__item">
+                        <a className='menu__link'>
+                            <img class="menu__link-img" src="/images/arrow.svg">
+                            <span class="menu__link-name">Инциденты</span></a>
+                    </li>
+                    <li class="menu__item">
+                        <a className='menu__link'>
+                            <img class="menu__link-img" src="/images/arrow.svg">
+                            <span class="menu__link-name">Проблемы</span></a>
+                    </li>
+                    <li class="menu__item">
+                        <a className='menu__link'>
+                            <img class="menu__link-img" src="/images/arrow.svg">
+                            <span class="menu__link-name">Настройка каталогов
+                            </span></a>
+                    </li>
+                    <li class="menu__item">
+                        <a className='menu__link'>
+                            <img class="menu__link-img" src="/images/arrow.svg">
+                            <span class="menu__link-name">Запросы на обслуживание</span></a>
+                    </li>
+                    <li class="menu__item">
+                        <a className='menu__link'>
+                            <img class="menu__link-img" src="/images/arrow.svg">
+                            <span class="menu__link-name">Запросы на изменение</span></a>
+                    </li>
+                    <li class="menu__item">
+                        <a className='menu__link'>
+                            <img class="menu__link-img" src="/images/arrow.svg">
+                            <span class="menu__link-name">Управление конфигурациями</span></a>
+                    </li>
+                    <li class="menu__item">
+                        <a className='menu__link'>
+                            <img class="menu__link-img" src="/images/arrow.svg">
+                            <span class="menu__link-name">Управление уровнем услуг</span></a>
+                    </li>
+                    <li class="menu__item">
+                        <a className='menu__link'>
+                            <img class="menu__link-img" src="/images/arrow.svg">
+                            <span class="menu__link-name">Настройка соответствий</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main">
+            <div class="subtask">
+                <div class="subtask__create">
+                    <p class="subtask__title">Подзадача</p>
+                    <button class="subtask__create-btn modal__btn">Создать</button>
+                </div>
+                <div class="subtask__save">
+                    <button class="subtask__save-btn">Сохранить</button>
+                    <button class="subtask__save-exit">Сохранить и выйти</button>
+                </div>
+            </div>
+            <p class="main__title">STSK0004783 На инциденте, запросе, проблеме, в статусе закрыто некоторые поля
+                остаются редактируемыми для агента если он Caller</p>
+            <div class="task__content">
+                <div class="task__column task__column-padded">
+                    <div class="task__field">
+                        <p class="task__label"><span class="task__label-mark">*</span>Тема</p>
+                        <input type="text" class="task__input"
+                            value="На инциденте, запросе, проблеме, в статусе закрыто некоторые поля остаются редактируемыми для агента если он Caller">
+                    </div>
+                    <div class="task__field">
+                        <p class="task__label">Описание</p>
+                        <input type="text" class="task__input" value="">
+                    </div>
+                    <div class="task__field">
+                        <p class="task__label"><span class="task__label-mark">*</span>Рабочие заметки</p>
+                        <input type="text" class="task__input" value="Проверить ACL id=172830402014193655">
+                    </div>
+                    <div class="task__field">
+                        <p class="task__label">Ответственный</p>
+                        <div class="task__item">
+                            <div class="task__input task__list ">
+                                <div class="task__list-item">
+                                    <p class="task__list-text">Константин Константинопольский</p>
+                                </div>
+                                <a class="task__remove"><img class="task__remove-img"
+                                        src="/images/remove.svg"></img></a>
+                            </div>
+                            <button class="button task__item-btn"><img class="header__settings-img"
+                                    src="/images/add.svg" alt=""></button>
+                            <button class="button task__item-btn"><img class="header__settings-img"
+                                    src="/images/quest.svg" alt=""></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="task__column">
+                    <div class="task__field">
+                        <p class="task__label">Статус</p>
+                        <input type="text" class="task__input" value="Новая">
+                    </div>
+                    <div class="task__field">
+                        <p class="task__label">Продукт</p>
+                        <input type="text" class="task__input" value="Paltform">
+                    </div>
+                    <div class="task__field">
+                        <p class="task__label">Приоритет</p>
+                        <input type="text" class="task__input" value="Средний">
+                    </div>
+                    <div class="task__field">
+                        <p class="task__label">Группа</p>
+                        <div class="task__item">
+                            <div class="task__input task__list ">
+                                <div class="task__list-item">
+                                    <p class="task__list-text">Support Group</p>
+                                </div>
+                                <a class="task__remove"><img class="task__remove-img"
+                                        src="/images/remove.svg"></img></a>
+                            </div>
+                            <button class="button task__item-btn"><img class="header__settings-img"
+                                    src="/images/add.svg" alt=""></button>
+                            <button class="button task__item-btn"><img class="header__settings-img"
+                                    src="/images/quest.svg" alt=""></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="task__field task__comment">
+                <p class="task__label">Комментарий</p>
+                <input type="text" class="task__input task__comment-input" value="">
+            </div>
+            <div class="task__field task__field-padded">
+                <p class="task__label">Согласующие</p>
+                <div class="task__item ">
+                    <div class="task__input task__list">
+                        <div class="task__list-item">
+                            <p class="task__list-text">Андрей Пивоваров </p>
+                            <span class="task__list-btn">✖</span>
+                        </div>
+                        <div class="task__list-item">
+                            <p class="task__list-text">Максим Галактионов</p>
+                            <span class="task__list-btn">✖</span>
+                        </div>
+                        <div class="task__list-item">
+                            <p class="task__list-text">Алла Лин</p>
+                            <span class="task__list-btn">✖</span>
+                        </div>
+                        <div class="task__list-item">
+                            <p class="task__list-text">Константин Константинопольский Константинович </p>
+                            <span class="task__list-btn">✖</span>
+                        </div>
+                        <div class="task__list-item">
+                            <p class="task__list-text">Игорь Иванченко </p>
+                            <span class="task__list-btn">✖</span>
+                        </div>
+                        <div class="task__list-item">
+                            <p class="task__list-text">Юлия Эйчаровна </p>
+                            <span class="task__list-btn">✖</span>
+                        </div>
+                        <div class="task__list-item">
+                            <p class="task__list-text">Артём Подпрыгайко-Саппортов
+                            </p>
+                            <span class="task__list-btn">✖</span>
+                        </div>
+                        <div class="task__list-item">
+                            <p class="task__list-text">Илья Вазнец </p>
+                            <span class="task__list-btn">✖</span>
+                        </div>
+                        <div class="task__list-item">
+                            <p class="task__list-text">Михаил Вортенов </p>
+                            <span class="task__list-btn">✖</span>
+                        </div>
+                        <div class="task__list-item">
+                            <p class="task__list-text">Наталья Нашевна </p>
+                            <span class="task__list-btn">✖</span>
+                        </div>
+                        <div class="task__list-item">
+                            <p class="task__list-text">Евгения Итамовна </p>
+                            <span class="task__list-btn">✖</span>
+                        </div>
+                        <div class="task__list-item">
+                            <p class="task__list-text">Алиса Киральчук </p>
+                            <span class="task__list-btn">✖</span>
+                        </div>
+                        <a class="task__remove"><img class="task__remove-img" src="/images/remove.svg"></img></a>
+                    </div>
+
+                    <button class="button task__item-btn"><img class="header__settings-img" src="/images/add.svg"
+                            alt=""></button>
+                    <button class="button task__item-btn"><img class="header__settings-img" src="/images/quest.svg"
+                            alt=""></button>
+                </div>
+            </div>
+            <div class="task__content">
+                <div class="task__column task__column-padded">
+                    <div class="task__field">
+                        <p class="task__label">Когда открыто</p>
+                        <div class="task__item">
+                            <input type="text" class="task__input task__item-date" value="">
+                            <button class="button task__item-btn"><img class="header__settings-img"
+                                    src="/images/calendar.svg" alt=""></button>
+                        </div>
+                    </div>
+                    <div class="task__field">
+                        <p class="task__label">Кем открыто</p>
+                        <div class="task__item">
+                            <div class="task__input task__list">
+                                <div class="task__list-item">
+                                    <p class="task__list-text">Андрей Пивоваров</p>
+                                </div>
+                                <a class="task__remove"><img class="task__remove-img"
+                                    src="/images/remove.svg"></img></a>
+                            </div>
+                            <button class="button task__item-btn"><img class="header__settings-img"
+                                    src="/images/add.svg" alt=""></button>
+                            <button class="button task__item-btn"><img class="header__settings-img"
+                                    src="/images/quest.svg" alt=""></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="task__column">
+                    <div class="task__field">
+                        <p class="task__label">Когда создано</p>
+                        <div class="task__item">
+                            <input type="text" class="task__input task__item-date" value="22.10.2024">
+                            <button class="button task__item-btn"><img class="header__settings-img"
+                                    src="/images/calendar.svg" alt=""></button>
+                        </div>
+                    </div>
+                    <div class="task__field">
+                        <p class="task__label">Кем создано</p>
+                        <div class="task__item">
+                            <div class="task__input task__list ">
+                                <div class="task__list-item">
+                                    <p class="task__list-text">Андрей Пивоваров</p>
+                                </div>
+                                <a class="task__remove"><img class="task__remove-img"
+                                    src="/images/remove.svg"></img></a>
+                            </div>
+                            <button class="button task__item-btn"><img class="header__settings-img"
+                                    src="/images/add.svg" alt=""></button>
+                            <button class="button task__item-btn"><img class="header__settings-img"
+                                    src="/images/quest.svg" alt=""></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal main">
+        <div class="modal__container">
+        <div class=" subtask modal__subtask">
+            <div class="subtask__create ">
+                <p class="subtask__title modal__title">Подзадача</p>
+            </div>
+            <div class="subtask__save modal__save">
+                <button class="subtask__save-btn modal__save_btn">Сохранить</button>
+                <button class="subtask__save-exit modal__close">Отменить</button>
+                <button class="modal__close button modal__cancel"><img class="header__settings-img" src="/images/close.svg" alt=""></button>
+            </div>
+        </div>
+        <p class="main__title">Новая запись</p>
+        <div class="task__content module__content">
+            <div class="task__column task__column-padded">
+                <div class="task__field">
+                    <p class="task__label"><span class="task__label-mark">*</span>Тема</p>
+                    <input type="text" class="task__input"
+                        value="На инциденте, запросе, проблеме, в статусе закрыто некоторые поля остаются редактируемыми для агента если он Caller">
+                </div>
+                <div class="task__field">
+                    <p class="task__label">Описание</p>
+                    <input type="text" class="task__input" value="">
+                </div>
+                <div class="task__field">
+                    <p class="task__label"><span class="task__label-mark">*</span>Рабочие заметки</p>
+                    <input type="text" class="task__input" value="Проверить ACL id=172830402014193655">
+                </div>
+                <div class="task__field">
+                    <p class="task__label">Ответственный</p>
+                    <div class="task__item">
+                        <div class="task__input task__list ">
+                            <div class="task__list-item">
+                                <p class="task__list-text">Константин Константинопольский</p>
+                            </div>
+                            <a class="task__remove"><img class="task__remove-img"
+                                    src="/images/remove.svg"></img></a>
+                        </div>
+                        <button class="button task__item-btn"><img class="header__settings-img"
+                                src="/images/add.svg" alt=""></button>
+                        <button class="button task__item-btn"><img class="header__settings-img"
+                                src="/images/quest.svg" alt=""></button>
+                    </div>
+                </div>
+            </div>
+            <div class="task__column">
+                <div class="task__field">
+                    <p class="task__label">Статус</p>
+                    <input type="text" class="task__input" value="Новая">
+                </div>
+                <div class="task__field">
+                    <p class="task__label">Продукт</p>
+                    <input type="text" class="task__input" value="Paltform">
+                </div>
+                <div class="task__field">
+                    <p class="task__label">Приоритет</p>
+                    <input type="text" class="task__input" value="Средний">
+                </div>
+                <div class="task__field">
+                    <p class="task__label">Группа</p>
+                    <div class="task__item">
+                        <div class="task__input task__list ">
+                            <div class="task__list-item">
+                                <p class="task__list-text">Support Group</p>
+                            </div>
+                            <a class="task__remove"><img class="task__remove-img"
+                                    src="/images/remove.svg"></img></a>
+                        </div>
+                        <button class="button task__item-btn"><img class="header__settings-img"
+                                src="/images/add.svg" alt=""></button>
+                        <button class="button task__item-btn"><img class="header__settings-img"
+                                src="/images/quest.svg" alt=""></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="task__field task__comment">
+            <p class="task__label">Комментарий</p>
+            <input type="text" class="task__input task__comment-input" value="">
+        </div>
+        <div class="task__field task__field-padded">
+            <p class="task__label">Согласующие</p>
+            <div class="task__item ">
+                <div class="task__input task__list">
+                    <div class="task__list-item">
+                        <p class="task__list-text">Андрей Пивоваров </p>
+                        <span class="task__list-btn">✖</span>
+                    </div>
+                    <div class="task__list-item">
+                        <p class="task__list-text">Максим Галактионов</p>
+                        <span class="task__list-btn">✖</span>
+                    </div>
+                    <div class="task__list-item">
+                        <p class="task__list-text">Алла Лин</p>
+                        <span class="task__list-btn">✖</span>
+                    </div>
+                    <div class="task__list-item">
+                        <p class="task__list-text">Константин Константинопольский Константинович </p>
+                        <span class="task__list-btn">✖</span>
+                    </div>
+                    <div class="task__list-item">
+                        <p class="task__list-text">Игорь Иванченко </p>
+                        <span class="task__list-btn">✖</span>
+                    </div>
+                    <div class="task__list-item">
+                        <p class="task__list-text">Юлия Эйчаровна </p>
+                        <span class="task__list-btn">✖</span>
+                    </div>
+                    <div class="task__list-item">
+                        <p class="task__list-text">Артём Подпрыгайко-Саппортов
+                        </p>
+                        <span class="task__list-btn">✖</span>
+                    </div>
+                    <div class="task__list-item">
+                        <p class="task__list-text">Илья Вазнец </p>
+                        <span class="task__list-btn">✖</span>
+                    </div>
+                    <div class="task__list-item">
+                        <p class="task__list-text">Михаил Вортенов </p>
+                        <span class="task__list-btn">✖</span>
+                    </div>
+                    <div class="task__list-item">
+                        <p class="task__list-text">Наталья Нашевна </p>
+                        <span class="task__list-btn">✖</span>
+                    </div>
+                    <div class="task__list-item">
+                        <p class="task__list-text">Евгения Итамовна </p>
+                        <span class="task__list-btn">✖</span>
+                    </div>
+                    <div class="task__list-item">
+                        <p class="task__list-text">Алиса Киральчук </p>
+                        <span class="task__list-btn">✖</span>
+                    </div>
+                    <a class="task__remove"><img class="task__remove-img" src="/images/remove.svg"></img></a>
+                </div>
+
+                <button class="button task__item-btn"><img class="header__settings-img" src="/images/add.svg"
+                        alt=""></button>
+                <button class="button task__item-btn"><img class="header__settings-img" src="/images/quest.svg"
+                        alt=""></button>
+            </div>
+        </div>
+        <div class="task__content module__content">
+            <div class="task__column task__column-padded">
+                <div class="task__field">
+                    <p class="task__label">Когда открыто</p>
+                    <div class="task__item">
+                        <input type="text" class="task__input task__item-date" value="">
+                        <button class="button task__item-btn"><img class="header__settings-img"
+                                src="/images/calendar.svg" alt=""></button>
+                    </div>
+                </div>
+                <div class="task__field">
+                    <p class="task__label">Кем открыто</p>
+                    <div class="task__item">
+                        <div class="task__input task__list">
+                            <div class="task__list-item">
+                                <p class="task__list-text">Андрей Пивоваров</p>
+                            </div>
+                            <a class="task__remove"><img class="task__remove-img"
+                                src="/images/remove.svg"></img></a>
+                        </div>
+                        <button class="button task__item-btn"><img class="header__settings-img"
+                                src="/images/add.svg" alt=""></button>
+                        <button class="button task__item-btn"><img class="header__settings-img"
+                                src="/images/quest.svg" alt=""></button>
+                    </div>
+                </div>
+            </div>
+            <div class="task__column">
+                <div class="task__field">
+                    <p class="task__label">Когда создано</p>
+                    <div class="task__item">
+                        <input type="text" class="task__input task__item-date" value="22.10.2024">
+                        <button class="button task__item-btn"><img class="header__settings-img"
+                                src="/images/calendar.svg" alt=""></button>
+                    </div>
+                </div>
+                <div class="task__field">
+                    <p class="task__label">Кем создано</p>
+                    <div class="task__item">
+                        <div class="task__input task__list ">
+                            <div class="task__list-item">
+                                <p class="task__list-text">Андрей Пивоваров</p>
+                            </div>
+                            <a class="task__remove"><img class="task__remove-img"
+                                src="/images/remove.svg"></img></a>
+                        </div>
+                        <button class="button task__item-btn"><img class="header__settings-img"
+                                src="/images/add.svg" alt=""></button>
+                        <button class="button task__item-btn"><img class="header__settings-img"
+                                src="/images/quest.svg" alt=""></button>
+                    </div>
+                </div>
+            </div>
+            <button class="subtask__save-btn modal__save_btn modal__end-btn">Сохранить</button>
+            <button class="subtask__save-exit modal__close modal__end-btn">Отменить</button>
+        </div>
+        </div>
+    </div>
+    <script src="/scripts/title.js"></script>
+    <script type="module" src="/scripts/modal.js"></script>
+    <script src="/scripts/sidebar.js"></script>
+</body>
+
+</html>
