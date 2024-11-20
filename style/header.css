@@ -41,7 +41,7 @@
 .header__search-bar {
     height: 32px;
     width: 296px;
-    background-image: url(../images/search.png);
+    background-image: url(../images/search.svg);
     background-position: center right 8px;
     padding-left: 8px;
     background-repeat: no-repeat;
