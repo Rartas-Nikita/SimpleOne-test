@@ -10,8 +10,8 @@ logos.forEach(function (logo) {
         main.classList.toggle("active");
 
         logo.querySelector('img').src = sidebar.classList.contains("active")
-            ? "/images/menu-inactive.svg"
-            : "/images/menu.svg";
+            ? "images/menu-inactive.svg"
+            : "images/menu.svg";
     });
 });
 
